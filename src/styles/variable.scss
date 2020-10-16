@@ -1,0 +1,24 @@
+/*LIGHT*/
+
+:root {
+  //SIZES
+  --finger-size: 40px;
+  //COLORS (h-header, m-main, w-work, c-contact)
+  --h-border-bottom: #ccc;
+  --h-logo: #000;
+  --h-menu-item: #000;
+  --h-menu-item-hover: #ccc;
+  --h-resume: #3080de;
+  --h-resume-border: #3080de;
+  --h-resume-hover-background: #3080de;
+  --h-resume-hover-text: #fff;
+  --h-mode-button-light-background: #dee2ed;
+  --h-mode-button-dark-background: #1a1c20;
+  --h-mode-button-circle: #fff;
+}
+
+/*DARK*/
+
+.dark:root {
+  --h-logo: #fff;
+}
