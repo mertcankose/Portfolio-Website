@@ -1,9 +1,14 @@
 <template>
-  <div></div>
+  <Main />
 </template>
 
 <script>
-export default {};
+import Main from "../components/Main/Main.vue";
+export default {
+  components: {
+    Main
+  }
+};
 </script>
 
 <style></style>

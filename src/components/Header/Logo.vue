@@ -1,6 +1,6 @@
 <template>
   <h1 class="logo-heading">
-    <a href="">MERTCAN</a>
+    <router-link to="/" tag="a">MERTCAN</router-link>
   </h1>
 </template>
 
@@ -13,6 +13,10 @@ export default {
 <style scoped lang="scss">
 .logo-heading {
   color: var(--h-logo);
-  font-size: 32px;
+  font-size: 34px;
+  letter-spacing: 3px;
+  @media (max-width: 720px) {
+    font-size: 26px;
+  }
 }
 </style>

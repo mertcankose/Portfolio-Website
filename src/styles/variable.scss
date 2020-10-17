@@ -2,10 +2,11 @@
 
 :root {
   //SIZES
-  --finger-size: 40px;
-  //COLORS (h-header, m-main, w-work, c-contact)
-  --h-border-bottom: #ccc;
-  --h-logo: #000;
+  --finger-size: 44px;
+  //COLORS (h-header, m-main, w-work, c-contact, g-general)
+  --g-heading: #2e86de;
+  --h-border-bottom: #d2e4f5;
+  --h-logo: #2e86de;
   --h-menu-item: #000;
   --h-menu-item-hover: #ccc;
   --h-resume: #3080de;
@@ -15,6 +16,9 @@
   --h-mode-button-light-background: #dee2ed;
   --h-mode-button-dark-background: #1a1c20;
   --h-mode-button-circle: #fff;
+  --m-heading-background-1: #64a0e6;
+  --m-hi-message: #2172d2;
+  --m-heading-background-2: #3080de;
 }
 
 /*DARK*/

@@ -1,11 +1,9 @@
 <template>
-  <div></div>
+  <div class="project"></div>
 </template>
 
 <script>
-export default {
-  components: {}
-};
+export default {};
 </script>
 
 <style></style>
