@@ -1,10 +1,7 @@
 <template>
   <div class="works-container">
-    <h1>WORKS</h1>
-    <div class="works-boxes">
-      <Projects class="projects-box" />
-      <Toolkit class="toolkit-box" />
-    </div>
+    <Projects class="projects-box" />
+    <Toolkit class="toolkit-box" />
   </div>
 </template>
 
@@ -22,47 +19,35 @@ export default {
 
 <style scoped lang="scss">
 .works-container {
+  display: flex;
+  justify-content: space-around;
   width: 85%;
   margin-left: auto;
   margin-right: auto;
-  height: 90vh;
   margin-bottom: 100px;
+
   @media (max-width: 649px) {
+    flex-direction: column;
     width: 100%;
     height: auto;
   }
-  h1 {
-    text-align: center;
-    color: var(--g-heading);
-  }
-  .works-boxes {
-    display: flex;
-    justify-content: space-around;
-
+  .projects-box {
+    min-width: 85%;
     @media (max-width: 649px) {
-      flex-direction: column;
+      margin-left: auto;
+      margin-right: auto;
+      width: 90%;
     }
-    .projects-box {
-      min-width: 85%;
-      height: 80vh;
-      @media (max-width: 649px) {
-        margin-left: auto;
-        margin-right: auto;
-        height: 70vh;
-        width: 90%;
-      }
-    }
-    .toolkit-box {
-      min-width: 80px;
-      height: 80vh;
-      @media (max-width: 649px) {
-        min-width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        height: 10vh;
-        margin-top: 80px;
-        margin-bottom: 10px;
-      }
+  }
+  .toolkit-box {
+    min-width: 80px;
+    @media (max-width: 649px) {
+      min-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 80px;
+      margin-bottom: 10px;
+      order: -1;
     }
   }
 }

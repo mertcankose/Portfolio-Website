@@ -45,7 +45,7 @@ export default {
       margin-right: auto;
     }
     @media (max-width: 649px) {
-      width: 80%;
+      width: 90%;
       background-size: 14px 14px;
       text-align: center;
       margin-left: auto;

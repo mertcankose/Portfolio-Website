@@ -4,6 +4,8 @@
     <Header />
     <Main />
     <Works />
+    <Contact />
+    <Footer />
   </div>
 </template>
 
@@ -11,14 +13,18 @@
 import Header from "./components/Header/Header.vue";
 import Main from "./components/Main/Main.vue";
 import Works from "./components/Works/Works.vue";
+import Contact from "./components/Contact/Contact.vue";
+import Footer from "./components/Footer/Footer.vue";
 import SocialMediaStick from "./components/Constant/SocialMedia.vue";
 export default {
   name: "App",
   components: {
+    SocialMediaStick,
     Header,
     Main,
-    SocialMediaStick,
-    Works
+    Works,
+    Contact,
+    Footer
   },
   data() {
     return {};

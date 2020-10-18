@@ -1,20 +1,28 @@
 <template>
-  <div class="project-box">
-    <ProjectBox />
-    <ProjectBox />
-    <ProjectBox />
-    <ProjectBox />
-    <ProjectBox />
-    <ProjectBox />
-    <ProjectBox />
-    <ProjectBox />
+  <div class="projects-out">
+    <h1>WORKS</h1>
+    <div class="projects-container">
+      <ProjectBox
+        v-for="(item, index) in works"
+        :key="index"
+        class="project-box"
+        :siteLink="item.siteLink"
+        :photo="item.photo"
+        :heading="item.heading"
+        :description="item.description"
+        :githubLink="item.githubLink"
+        :technologies="item.technologies"
+      />
+    </div>
   </div>
 </template>
 
 <script>
 import ProjectBox from "./ProjectBox.vue";
+import { workMixin } from "./workMixin.js";
 export default {
   name: "Project",
+  mixins: [workMixin],
   components: {
     ProjectBox
   }
@@ -22,6 +30,33 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.project-box {
+.projects-out {
+  h1 {
+    text-align: center;
+    color: var(--g-heading);
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+}
+.projects-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+
+  @media (max-width: 649px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .project-box {
+    width: 30%;
+    height: auto;
+    @media (max-width: 1050px) {
+      width: 45%;
+    }
+    @media (max-width: 649px) {
+      width: 100%;
+    }
+  }
 }
 </style>
