@@ -42,7 +42,7 @@ export default {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 50px;
 
   @media (max-width: 649px) {
     padding-left: 10px;
@@ -51,7 +51,7 @@ export default {
   .project-box {
     width: 30%;
     height: auto;
-    @media (max-width: 1050px) {
+    @media (max-width: 1200px) {
       width: 45%;
     }
     @media (max-width: 649px) {

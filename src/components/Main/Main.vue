@@ -1,5 +1,14 @@
 <template>
-  <div class="main-container">
+  <div
+    class="main-container"
+    data-aos="fade-right"
+    data-aos-offset="100"
+    data-aos-delay="50"
+    data-aos-duration="600"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+  >
     <div class="introduction-container">
       <Introduction />
     </div>
@@ -26,11 +35,11 @@ export default {
   padding-top: 10px;
   padding-bottom: 10px;
   width: 85%;
-  min-height: 80vh;
+  min-height: 88vh;
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   @media (max-width: 900px) {
     width: 100%;
@@ -38,7 +47,7 @@ export default {
   }
   @media (max-width: 649px) {
     flex-direction: column;
-    min-height: 80vh;
+    min-height: 86vh;
   }
   .introduction-container {
     order: 2;

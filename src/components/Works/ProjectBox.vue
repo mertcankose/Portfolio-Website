@@ -1,7 +1,18 @@
 <template>
-  <div class="project-card">
+  <div
+    class="project-card"
+    data-aos="fade-up"
+    data-aos-offset="80"
+    data-aos-delay="40"
+    data-aos-duration="500"
+    data-aos-mirror="true"
+  >
     <a :href="siteLink" class="site-link-box" target="_blank">
-      <img :src="require(`../../assets/workPhotos/${this.photo}.png`)" alt="" />
+      <img
+        :src="require(`../../assets/workPhotos/${this.photo}.png`)"
+        alt=""
+        loading="lazy"
+      />
     </a>
     <div class="info-box">
       <div class="info-box-head">
@@ -72,15 +83,17 @@ export default {
 <style scoped lang="scss">
 .project-card {
   //border: 2px solid #bcdafa;
-  background-color: #e9f3ff;
-  padding: 14px;
+  background-color: var(--w-project-card-background);
+  padding: 12px 22px;
   border-radius: 8px;
+  box-shadow: 8px 8px 13px var(--w-project-card-box-shadow-1),
+    -4px -5px 8px var(--w-project-card-box-shadow-2);
   .site-link-box {
     border-radius: 8px;
     display: inline-block;
     position: relative;
     width: 100%;
-    padding-top: 56.5%; /* 4:3 Aspect Ratio */
+    padding-top: 56.5%; /* Aspect Ratio */
     img {
       border-radius: 8px;
       position: absolute;
@@ -89,8 +102,10 @@ export default {
       bottom: 0;
       right: 0;
       mix-blend-mode: multiply;
+      transition: transform 400ms;
       &:hover {
         mix-blend-mode: normal;
+        transform: scale(1.1);
       }
       //min-height: 250px;
     }
@@ -104,10 +119,16 @@ export default {
     &-head {
       h1 {
         font-size: 1.6rem;
+        @media (max-width: 900px) {
+          font-size: 1.4rem;
+        }
       }
       p {
         font-size: 17px;
         line-height: 28px;
+        @media (max-width: 900px) {
+          font-size: 15px;
+        }
       }
     }
     &-bottom {
@@ -121,9 +142,12 @@ export default {
         flex-wrap: wrap;
         span {
           font-size: 14px;
-          color: rgb(173, 169, 169);
+          color: var(--w-project-card-technologies);
           &:not(:nth-child(1)) {
             margin-left: 12px;
+          }
+          @media (max-width: 900px) {
+            font-size: 4px;
           }
         }
       }
@@ -139,7 +163,7 @@ export default {
           margin-left: 8px;
         }
         &:hover {
-          color: #8395a7;
+          color: var(--w-project-card-links-hover);
         }
       }
       svg {

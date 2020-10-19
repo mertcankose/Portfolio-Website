@@ -60,6 +60,7 @@ export default {
     justify-content: space-between;
     @media (max-width: 649px) {
       flex-direction: row;
+      justify-content: center;
     }
     &::after {
       content: "";
@@ -67,7 +68,7 @@ export default {
       width: 2px;
       height: 90px;
       margin: 0px auto;
-      background-color: #ccc;
+      background-color: var(--g-social-media-stick);
       @media (max-width: 649px) {
         display: none;
       }
@@ -96,6 +97,10 @@ export default {
         svg {
           width: 26px;
           height: 26px;
+          @media (max-width: 1200px) {
+            width: 22px;
+            height: 22px;
+          }
         }
       }
     }

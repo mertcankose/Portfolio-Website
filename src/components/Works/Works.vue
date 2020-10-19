@@ -1,5 +1,5 @@
 <template>
-  <div class="works-container">
+  <div class="works-container" id="works">
     <Projects class="projects-box" />
     <Toolkit class="toolkit-box" />
   </div>
@@ -20,28 +20,29 @@ export default {
 <style scoped lang="scss">
 .works-container {
   display: flex;
-  justify-content: space-around;
-  width: 85%;
+  justify-content: space-evenly;
+  width: 88%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 100px;
-
-  @media (max-width: 649px) {
+  @media (max-width: 900px) {
     flex-direction: column;
-    width: 100%;
+    width: 95%;
     height: auto;
   }
+  @media (max-width: 649px) {
+  }
   .projects-box {
-    min-width: 85%;
-    @media (max-width: 649px) {
+    max-width: 90%;
+    @media (max-width: 900px) {
       margin-left: auto;
       margin-right: auto;
-      width: 90%;
+      width: 86%;
     }
   }
   .toolkit-box {
-    min-width: 80px;
-    @media (max-width: 649px) {
+    max-width: 60px;
+    @media (max-width: 900px) {
       min-width: 90%;
       margin-left: auto;
       margin-right: auto;

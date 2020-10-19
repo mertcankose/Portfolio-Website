@@ -62,7 +62,7 @@ export const workMixin = {
           description:
             "The Project that I am coding the designs I like. I have used a lot of Scss.",
           githubLink: "https://github.com/mertcankose/Daily-Frontend",
-          technologies: ["Css", "Scss"]
+          technologies: ["Css", "Scss", "Gulp.js"]
         },
         {
           siteLink: "https://confident-bose-ffea0e.netlify.app/",
@@ -71,7 +71,7 @@ export const workMixin = {
           description:
             "A landing page that I developed Scss and a little bit JavaScript. This is the first serious website. It was funny for me :)",
           githubLink: "https://github.com/mertcankose/manage-landing-page-",
-          technologies: ["Css", "Scss", "JavaScript"]
+          technologies: ["Scss", "JavaScript", "Gulp.js"]
         },
         {
           siteLink: "https://simongamemertcan.netlify.app/",

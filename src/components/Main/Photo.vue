@@ -15,6 +15,7 @@ export default {};
 .photo-container {
   display: flex;
   place-items: center;
+
   img {
     width: 100%;
     max-width: 32vw;

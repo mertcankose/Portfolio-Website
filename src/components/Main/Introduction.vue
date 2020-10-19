@@ -31,8 +31,8 @@ export default {
     width: 90%;
     background-image: linear-gradient(
       0deg,
-      var(--m-heading-background-1),
-      var(--m-heading-background-2)
+      var(--m-heading-background-gradient-1),
+      var(--m-heading-background-gradient-2)
     );
     background-size: 30px 30px;
     background-repeat: repeat-x;
@@ -45,12 +45,12 @@ export default {
       margin-right: auto;
     }
     @media (max-width: 649px) {
-      width: 90%;
+      width: 95%;
       background-size: 14px 14px;
       text-align: center;
       margin-left: auto;
       margin-right: auto;
-      font-size: 2rem;
+      font-size: 1.8rem;
       margin-top: 8px;
       margin-bottom: 10px;
     }

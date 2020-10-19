@@ -3,8 +3,16 @@
 :root {
   //SIZES
   --finger-size: 44px;
-  //COLORS (h-header, m-main, w-work, c-contact, g-general)
+  //COLORS (h-header, m-main, w-work, c-contact, f-footer g-general)
+  //GLOBAL
+  --g-html: #ef6026;
+  --g-css: #2965f1;
+  --g-js: #f7df1e;
+  --g-vscode: #33a5f0;
+  --g-vue: #3fb984;
   --g-heading: #2e86de;
+  --g-social-media-stick: #ccc;
+  //HEADER
   --h-border-bottom: #d2e4f5;
   --h-logo: #2e86de;
   --h-menu-item: #000;
@@ -16,14 +24,36 @@
   --h-mode-button-light-background: #dee2ed;
   --h-mode-button-dark-background: #1a1c20;
   --h-mode-button-circle: #fff;
-  --m-heading-background-1: #64a0e6;
+  --h-box-shadow: rgba(187, 223, 223, 0.5);
+  --h-background: #f1f8ff;
+  //MAIN
   --m-hi-message: #2172d2;
-  --m-heading-background-2: #3080de;
-  --g-html: #ef6026;
-  --g-css: #2965f1;
-  --g-js: #f7df1e;
-  --g-vscode: #33a5f0;
-  --g-vue: #3fb984;
+  --m-heading-background-gradient-1: #64a0e6;
+  --m-heading-background-gradient-2: #3080de;
+  //WORKS
+  --w-project-card-box-shadow-1: #7191b8;
+  --w-project-card-box-shadow-2: #87b1e6;
+  --w-project-card-background: #e9f3ff;
+  --w-project-card-technologies: rgb(173, 169, 169);
+  --w-project-card-links-hover: #8395a7;
+  --w-toolkit-background-gradient-1: #64a0e6;
+  --w-toolkit-background-gradient-2: #3080de;
+  --w-toolkit-span: #000;
+  --w-toolkit-span-hover: #000;
+  //CONTACT
+  --c-header: #fff;
+  --c-valid: green;
+  --c-invalid: red;
+  --c-normal: #4d23f5;
+  --c-button-valid-background: #fff;
+  --c-button-valid-color: #000;
+  --c-button-invalid-background: rgb(231, 231, 231);
+  --c-button-invalid-color: rgb(156, 156, 156);
+  --c-button-base-background: #fff;
+  --c-button-hover-background: #4f8dff;
+  --c-button-hover-color: #fff;
+  //FOOTER
+  --f-border-left-color: #a2b8b0;
 }
 
 /*DARK*/

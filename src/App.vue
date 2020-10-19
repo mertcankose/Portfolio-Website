@@ -1,7 +1,7 @@
 <template>
-  <div class="container">
+  <div id="app-container">
     <SocialMediaStick class="social-media" />
-    <Header />
+    <Header class="header" />
     <Main />
     <Works />
     <Contact />
@@ -16,6 +16,8 @@ import Works from "./components/Works/Works.vue";
 import Contact from "./components/Contact/Contact.vue";
 import Footer from "./components/Footer/Footer.vue";
 import SocialMediaStick from "./components/Constant/SocialMedia.vue";
+//SCROLLING
+import AOS from "aos";
 export default {
   name: "App",
   components: {
@@ -28,27 +30,28 @@ export default {
   },
   data() {
     return {};
+  },
+  created() {
+    AOS.init();
   }
 };
 </script>
 
 <style scoped lang="scss">
-.container {
+#app-container {
   display: flex;
   flex-direction: column;
-}
-.social-media {
-  position: fixed;
-  bottom: 0;
-  left: 30px;
-  width: 44px;
-
-  @media (max-width: 900px) {
-    left: 4px;
-    right: auto;
-  }
-  @media (max-width: 649px) {
-    display: none;
+  .social-media {
+    position: fixed;
+    bottom: 0;
+    left: 20px;
+    @media (max-width: 900px) {
+      left: 4px;
+      right: auto;
+    }
+    @media (max-width: 649px) {
+      display: none;
+    }
   }
 }
 </style>

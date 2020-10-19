@@ -4,7 +4,11 @@ import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
 import "./styles/app.scss";
-import VueMq from "vue-mq";
+import VueMq from "vue-mq"; //Media Query
+import Vuelidate from "vuelidate"; //FOR FORMS VALIDATION
+//FOR SCROLL
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 Vue.use(VueMq, {
   breakpoints: {
@@ -14,6 +18,11 @@ Vue.use(VueMq, {
     desktop: Infinity
   }
 });
+
+Vue.use(Vuelidate);
+
+Vue.use(AOS);
+AOS.init();
 
 Vue.config.productionTip = false;
 

@@ -8,10 +8,11 @@
       >
         <HamburgerMenu />
       </button>
+
       <button
         class="header-close"
-        v-if="menuMobileOpen"
         @click="menuMobileOpen = !menuMobileOpen"
+        v-if="menuMobileOpen"
       >
         <CloseMenu />
       </button>
@@ -22,26 +23,34 @@
       :style="[menuMobileOpen ? openMobileStyle : {}]"
     >
       <li>
-        <a href="#">Work</a>
+        <a href="#works">Work</a>
       </li>
       <li>
-        <a href="#">Contact</a>
+        <a href="#contact">Contact</a>
       </li>
       <li>
-        <a href="#">Blog</a>
+        <a href="https://dev.to/mertcankose" target="_blank">Blog</a>
       </li>
+      <!--
       <li>
+      
         <div class="resume-container">
           <router-link to="/resume.pdf" tag="a">RESUME</router-link>
         </div>
+  
       </li>
+      -->
       <SocialMedia v-if="$mq === 'mobile'" class="social-media" />
     </ul>
 
-    <label for="checkbox" class="checkbox-input">
-      <input type="checkbox" name="checkbox" id="checkbox" />
-      <span class="checkbox"></span>
-    </label>
+    <div class="dark-mode-box">
+      <Light />
+      <label for="checkbox" class="checkbox-input">
+        <input type="checkbox" name="checkbox" id="checkbox" />
+        <span class="checkbox"></span>
+      </label>
+      <Night />
+    </div>
   </div>
 </template>
 
@@ -49,19 +58,23 @@
 import HamburgerMenu from "../../assets/icons/menu.svg";
 import CloseMenu from "../../assets/icons/close.svg";
 import SocialMedia from "../../components/Constant/SocialMedia.vue";
+import Light from "../../assets/icons/light.svg";
+import Night from "../../assets/icons/night.svg";
 export default {
   name: "HeaderMenu",
   components: {
     HamburgerMenu,
     CloseMenu,
-    SocialMedia
+    SocialMedia,
+    Light,
+    Night
   },
   data() {
     return {
       menuMobileOpen: false,
       openMobileStyle: {
         opacity: 1,
-        transform: "translateY(0)",
+        transform: "translateY(-1%)",
         pointerEvents: "auto"
       }
     };
@@ -78,12 +91,15 @@ export default {
     height: 6vh;
   }
   .header-hamburger {
+    outline: none;
+
     svg {
-      width: 32px;
-      height: 32px;
+      width: 34px;
+      height: 34px;
     }
   }
   .header-close {
+    outline: none;
     svg {
       width: 32px;
       height: 32px;
@@ -189,58 +205,80 @@ export default {
       }
     }
   }
-
-  //SAME MOBILE AND DESKTOP
-  .checkbox-input {
-    display: inline-block;
-    height: var(--finger-size);
-    padding-left: 14px;
-    padding-right: 14px;
+  .dark-mode-box {
     display: flex;
+    align-items: center;
     margin-left: 24px;
     margin-right: 8px;
-    place-items: center;
-    cursor: pointer;
-    @media (max-width: 900px) {
-      padding-left: 8px;
-      padding-right: 8px;
-      margin-left: 12px;
-    }
     @media (max-width: 649px) {
       order: -1;
-      margin-right: 16px;
+      margin-left: 8px;
+      margin-right: 24px;
     }
-    input {
-      display: none;
-      &:checked + .checkbox {
-        background-color: var(--h-mode-button-light-background);
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+    //SAME MOBILE AND DESKTOP
+    .checkbox-input {
+      display: inline-block;
+      height: var(--finger-size);
+      padding-left: 10px;
+      padding-right: 10px;
+      display: flex;
+      place-items: center;
+      cursor: pointer;
+      @media (max-width: 900px) {
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+      @media (max-width: 649px) {
+      }
+      input {
+        display: none;
+        &:checked + .checkbox {
+          background-color: var(--h-mode-button-light-background);
+          &::before {
+            left: 25px;
+          }
+        }
+      }
+      .checkbox {
+        width: 53px;
+        min-width: 53px;
+        height: 28px;
+        border-radius: 14px;
+        background-color: var(--h-mode-button-dark-background);
+        display: inherit;
+        position: relative;
+        transition: 400ms background-color;
         &::before {
-          left: 25px;
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: var(--h-mode-button-circle);
+          top: 4px;
+          left: 4px;
+          bottom: 4px;
+          transition: 400ms left;
         }
       }
     }
-    .checkbox {
-      width: 53px;
-      min-width: 53px;
-      height: 28px;
-      border-radius: 14px;
-      background-color: var(--h-mode-button-dark-background);
-      display: inherit;
-      position: relative;
-      transition: 400ms background-color;
-      &::before {
-        content: "";
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background-color: var(--h-mode-button-circle);
-        top: 4px;
-        left: 4px;
-        bottom: 4px;
-        transition: 400ms left;
-      }
-    }
+  }
+
+  .fade-enter {
+    opacity: 0;
+  }
+  .fade-enter-active {
+    transition: opacity 1s;
+  }
+  .fade-leave-active {
+    transition: opacity 1s;
+    opacity: 0;
+  }
+  .social-media {
   }
 }
 </style>
