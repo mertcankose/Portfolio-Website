@@ -45,8 +45,14 @@
 
     <div class="dark-mode-box">
       <Light />
-      <label for="checkbox" class="checkbox-input">
-        <input type="checkbox" name="checkbox" id="checkbox" />
+      <label for="modecheckbox" class="checkbox-input">
+        <input
+          type="checkbox"
+          name="checkbox"
+          id="modecheckbox"
+          @click="modeActive()"
+          v-model="checked"
+        />
         <span class="checkbox"></span>
       </label>
       <Night />
@@ -76,8 +82,35 @@ export default {
         opacity: 1,
         transform: "translateY(-1%)",
         pointerEvents: "auto"
-      }
+      },
+      checked: false
     };
+  },
+  created() {
+    this.checked = localStorage.getItem("position");
+  },
+  methods: {
+    modeActive() {
+      //dark
+      let element = document.getElementsByTagName("html")[0];
+      element.classList.toggle("dark");
+      let theme = localStorage.getItem("theme");
+      //localStorage.setItem("theme", "light");
+      if (theme && theme === "dark") {
+        localStorage.setItem("theme", "");
+      } else {
+        localStorage.setItem("theme", "dark");
+      }
+      //checkbox
+      //let element2 = document.getElementById("modecheckbox");
+      //element2.checked = !this.checked;
+      let position = localStorage.getItem("position");
+      if (position && position == "true") {
+        localStorage.setItem("position", "");
+      } else {
+        localStorage.setItem("position", !this.checked);
+      }
+    }
   }
 };
 </script>
@@ -94,6 +127,7 @@ export default {
     outline: none;
 
     svg {
+      color: var(--h-all-svg);
       width: 34px;
       height: 34px;
     }
@@ -101,6 +135,7 @@ export default {
   .header-close {
     outline: none;
     svg {
+      color: var(--h-all-svg);
       width: 32px;
       height: 32px;
     }
@@ -174,6 +209,7 @@ export default {
     pointer-events: none;
     font-size: 28px;
     padding-bottom: 10px;
+    box-shadow: 3px 4px 10px #eee;
     li {
       display: flex;
       justify-content: center;
@@ -213,9 +249,10 @@ export default {
     @media (max-width: 649px) {
       order: -1;
       margin-left: 8px;
-      margin-right: 24px;
+      margin-right: 12px;
     }
     svg {
+      color: var(--h-all-svg);
       width: 20px;
       height: 20px;
     }

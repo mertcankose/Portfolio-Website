@@ -4,6 +4,7 @@
   //SIZES
   --finger-size: 44px;
   //COLORS (h-header, m-main, w-work, c-contact, f-footer g-general)
+
   //GLOBAL
   --g-html: #ef6026;
   --g-css: #2965f1;
@@ -12,9 +13,18 @@
   --g-vue: #3fb984;
   --g-heading: #2e86de;
   --g-social-media-stick: #ccc;
+  --g-body-background: #fbfbfd;
+  --g-scroll-background: #2e86de; /* 1f69ca*/
+  --g-scroll-box-shadow: rgb(156, 155, 155);
+  --g-scroll-background-hover: #4796e6;
+  --g-social-media-svg: #000;
+  --g-social-media-svg-mobile: #000;
+  --g-social-media-svg-hover: #000000;
   //HEADER
   --h-border-bottom: #d2e4f5;
-  --h-logo: #2e86de;
+  --h-all-svg: #000;
+  //2e86de
+  --h-logo: #3b87df;
   --h-menu-item: #000;
   --h-menu-item-hover: #ccc;
   --h-resume: #3080de;
@@ -25,21 +35,37 @@
   --h-mode-button-dark-background: #1a1c20;
   --h-mode-button-circle: #fff;
   --h-box-shadow: rgba(187, 223, 223, 0.5);
-  --h-background: #f1f8ff;
+  --h-background: #fdfdff; /*f1f8ff*/
   //MAIN
   --m-hi-message: #2172d2;
+  --m-mertcan-kose: #000;
   --m-heading-background-gradient-1: #64a0e6;
   --m-heading-background-gradient-2: #3080de;
+  --m-presentation: #000;
+  --m-photo-black-illustration: #000;
   //WORKS
-  --w-project-card-box-shadow-1: #7191b8;
-  --w-project-card-box-shadow-2: #87b1e6;
-  --w-project-card-background: #e9f3ff;
+  --w-heading: #3b87df;
+  --w-project-card-box-shadow-1: #cad4e2;
+  --w-project-card-box-shadow-2: #c6d2e0;
+  --w-project-card-background: #fafbfd;
+  --w-project-card-heading: #000;
+  --w-project-card-description: #000;
   --w-project-card-technologies: rgb(173, 169, 169);
   --w-project-card-links-hover: #8395a7;
+  --w-project-box-svg: #000;
+  --w-project-card-image-mix-blend-type: multiply;
   --w-toolkit-background-gradient-1: #64a0e6;
   --w-toolkit-background-gradient-2: #3080de;
+  --w-toolkit-heading: #000;
+  --w-toolkit-after: #000;
+  --w-toolkit-span-hidden: #fafbfd;
   --w-toolkit-span: #000;
   --w-toolkit-span-hover: #000;
+  --w-toolkit-nodejs: #333;
+  --w-toolkit-express: #222;
+  --w-toolkit-mongodb: #21313c;
+  --w-project-box-svg-hover: #8395a7;
+
   //CONTACT
   --c-header: #fff;
   --c-valid: green;
@@ -53,11 +79,88 @@
   --c-button-hover-background: #4f8dff;
   --c-button-hover-color: #fff;
   //FOOTER
+  --f-color: #000;
   --f-border-left-color: #a2b8b0;
 }
 
 /*DARK*/
 
 .dark:root {
-  --h-logo: #fff;
+  //COLORS (h-header, m-main, w-work, c-contact, f-footer g-general)
+
+  //GLOBAL
+  --g-html: #ef6026;
+  --g-css: #2965f1;
+  --g-js: #f7df1e;
+  --g-vscode: #33a5f0;
+  --g-vue: #3fb984;
+  --g-heading: #2e86de;
+  --g-social-media-stick: #ccc;
+  --g-body-background: #040402;
+  --g-scroll-background: #d17921; /* 1f69ca*/
+  --g-scroll-box-shadow: rgb(156, 155, 155);
+  --g-scroll-background-hover: #dd8a36;
+  --g-social-media-svg: #fff;
+  --g-social-media-svg-mobile: #000;
+  --g-social-media-svg-hover: #fff;
+  //HEADER
+  --h-border-bottom: #d2e4f5;
+  --h-all-svg: #fff;
+  --h-logo: #c47820;
+  --h-menu-item: #d17921;
+  --h-menu-item-hover: #ccc;
+  --h-resume: #3080de;
+  --h-resume-border: #3080de;
+  --h-resume-hover-background: #3080de;
+  --h-resume-hover-text: #fff;
+  --h-mode-button-light-background: #dee2ed;
+  --h-mode-button-dark-background: #1a1c20;
+  --h-mode-button-circle: #fff;
+  --h-box-shadow: rgba(78, 88, 88, 0.5);
+  --h-background: #040402;
+  //MAIN
+  --m-hi-message: #d17921;
+  --m-mertcan-kose: #ffffff;
+  --m-heading-background-gradient-1: #ad6a1c;
+  --m-heading-background-gradient-2: #c67920;
+  --m-presentation: #fff;
+  --m-photo-black-illustration: #fff;
+  //WORKS
+  --w-heading: #c47820;
+  --w-project-card-box-shadow-1: #9faec2;
+  --w-project-card-box-shadow-2: #b2cbe9;
+  --w-project-card-background: #120d07;
+  --w-project-card-heading: #fff;
+  --w-project-card-description: #fff;
+  --w-project-card-technologies: rgb(211, 211, 211);
+  --w-project-card-links-hover: #8395a7;
+  --w-project-box-svg: #fff;
+  --w-toolkit-background-gradient-1: #ad6a1c;
+  --w-toolkit-background-gradient-2: #c67920;
+  --w-toolkit-heading: #fff;
+  --w-toolkit-after: #fff;
+  --w-toolkit-span-hidden: #040402;
+  --w-toolkit-span: #fff;
+  --w-toolkit-span-hover: #fff;
+  --w-toolkit-nodejs: #fff;
+  --w-toolkit-express: #fff;
+  --w-toolkit-mongodb: #fff;
+  --w-project-card-image-mix-blend-type: normal;
+  --w-project-box-svg-hover: #6f7881;
+
+  //CONTACT
+  --c-header: #fff;
+  --c-valid: green;
+  --c-invalid: red;
+  --c-normal: #4d23f5;
+  --c-button-valid-background: #fff;
+  --c-button-valid-color: #000;
+  --c-button-invalid-background: rgb(231, 231, 231);
+  --c-button-invalid-color: rgb(156, 156, 156);
+  --c-button-base-background: #fff;
+  --c-button-hover-background: #4f8dff;
+  --c-button-hover-color: #fff;
+  //FOOTER
+  --f-color: #fff;
+  --f-border-left-color: #a2b8b0;
 }

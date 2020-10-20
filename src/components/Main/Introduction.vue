@@ -19,7 +19,7 @@ export default {
 .introduction-box {
   font-size: 2.4vw;
   @media (max-width: 900px) {
-    font-size: 22px;
+    font-size: 18px;
   }
   .hiMessage {
     color: var(--m-hi-message);
@@ -37,6 +37,7 @@ export default {
     background-size: 30px 30px;
     background-repeat: repeat-x;
     background-position: bottom;
+    color: var(--m-mertcan-kose);
     @media (max-width: 900px) {
       width: 85%;
       background-size: 14px 14px;
@@ -45,7 +46,7 @@ export default {
       margin-right: auto;
     }
     @media (max-width: 649px) {
-      width: 95%;
+      width: 85%;
       background-size: 14px 14px;
       text-align: center;
       margin-left: auto;
@@ -56,7 +57,8 @@ export default {
     }
   }
   .presentation {
-    line-height: 3.8rem;
+    line-height: 4.2rem;
+    color: var(--m-presentation);
     @media (max-width: 900px) {
       text-align: center;
     }

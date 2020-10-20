@@ -65,6 +65,7 @@ import {
   minLength,
   maxLength
 } from "vuelidate/lib/validators";
+import axios from "axios";
 export default {
   name: "Contact",
   data() {
@@ -97,6 +98,50 @@ export default {
         email: this.email,
         message: this.message
       };
+
+      this.name = null;
+      this.email = null;
+      this.message = "";
+
+      /*
+      const data = {
+        members: [
+          {
+            email_address: this.email,
+            status: "subscribed",
+            merge_fields: {
+              FNAME: this.firstName
+            }
+          }
+        ]
+      };
+      */
+      const id = process.env.MAILCHIMP_ID;
+      //const jsonData = JSON.stringify(data);
+      const listId = id;
+      const url = "https://us19.api.mailchimp.com/3.0/lists/" + listId;
+
+      const password = process.env.MAILCHIMP_PASSWORD;
+
+      const options = {
+        method: "POST",
+        auth: password
+      };
+
+      axios
+        .post(url, options)
+        .then(response => {
+          console.log("post-response", response);
+          if (response.statusCode === 200) {
+            console.log("success");
+          } else {
+            console.log("fail");
+          }
+        })
+        .catch(e => {
+          console.log("hata", e);
+        });
+
       console.log(form);
     }
   }

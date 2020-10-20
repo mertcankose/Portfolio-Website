@@ -3,8 +3,8 @@
     class="project-card"
     data-aos="fade-up"
     data-aos-offset="80"
-    data-aos-delay="40"
-    data-aos-duration="500"
+    data-aos-delay="35"
+    data-aos-duration="450"
     data-aos-mirror="true"
   >
     <a :href="siteLink" class="site-link-box" target="_blank">
@@ -84,10 +84,13 @@ export default {
 .project-card {
   //border: 2px solid #bcdafa;
   background-color: var(--w-project-card-background);
-  padding: 12px 22px;
+  padding: 16px 18px;
   border-radius: 8px;
-  box-shadow: 8px 8px 13px var(--w-project-card-box-shadow-1),
+  box-shadow: 2px 2px 2px 2px var(--w-project-card-box-shadow-1),
     -4px -5px 8px var(--w-project-card-box-shadow-2);
+  @media (max-width: 649px) {
+    padding: 12px 14px;
+  }
   .site-link-box {
     border-radius: 8px;
     display: inline-block;
@@ -101,11 +104,11 @@ export default {
       left: 0;
       bottom: 0;
       right: 0;
-      mix-blend-mode: multiply;
+      mix-blend-mode: var(--w-project-card-image-mix-blend-type);
       transition: transform 400ms;
       &:hover {
         mix-blend-mode: normal;
-        transform: scale(1.1);
+        transform: scale(1.09, 1.16);
       }
       //min-height: 250px;
     }
@@ -119,6 +122,7 @@ export default {
     &-head {
       h1 {
         font-size: 1.6rem;
+        color: var(--w-project-card-heading);
         @media (max-width: 900px) {
           font-size: 1.4rem;
         }
@@ -126,8 +130,9 @@ export default {
       p {
         font-size: 17px;
         line-height: 28px;
+        color: var(--w-project-card-description);
         @media (max-width: 900px) {
-          font-size: 15px;
+          font-size: 14px;
         }
       }
     }
@@ -147,7 +152,7 @@ export default {
             margin-left: 12px;
           }
           @media (max-width: 900px) {
-            font-size: 4px;
+            font-size: 11px;
           }
         }
       }
@@ -163,13 +168,18 @@ export default {
           margin-left: 8px;
         }
         &:hover {
-          color: var(--w-project-card-links-hover);
+          svg {
+            color: var(--w-project-box-svg-hover);
+          }
         }
       }
       svg {
         width: 22px;
         height: 22px;
-
+        color: var(--w-project-box-svg);
+        &:hover {
+          color: var(--w-project-box-svg-hover);
+        }
         @media (max-width: 649px) {
           width: 18px;
           height: 18px;

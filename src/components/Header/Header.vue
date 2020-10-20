@@ -75,13 +75,13 @@ export default {
   .logo-container {
     margin-left: 50px;
     @media (max-width: 900px) {
-      margin-left: 30px;
+      margin-left: 18px;
     }
   }
   .menu-container {
     margin-right: 50px;
     @media (max-width: 900px) {
-      margin-right: 30px;
+      margin-right: 18px;
     }
   }
 }

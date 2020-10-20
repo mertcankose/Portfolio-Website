@@ -35,7 +35,7 @@ export default {
   padding-top: 10px;
   padding-bottom: 10px;
   width: 85%;
-  min-height: 88vh;
+  min-height: 90vh;
   margin-left: auto;
   margin-right: auto;
   display: flex;

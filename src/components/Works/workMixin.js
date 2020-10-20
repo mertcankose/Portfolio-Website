@@ -3,7 +3,7 @@ export const workMixin = {
     return {
       works: [
         {
-          siteLink: "https://vue-admin-dashboard-my78210kg.vercel.app/",
+          siteLink: "https://vue-admin-dashboard.mertcankose.vercel.app/",
           photo: "vue-admin-panel",
           heading: "Vue Admin Panel",
           description:
@@ -12,11 +12,11 @@ export const workMixin = {
           technologies: ["JavaScript", "Vue", "Vuesax"]
         },
         {
-          siteLink: "https://github.com/mertcankose/Daily-Frontend",
+          siteLink: "https://react-admin-dashboard.vercel.app/",
           photo: "react-admin-panel",
           heading: "React Admin Panel",
           description: "An admin panel dashboard that I developed with React.",
-          githubLink: "https://github.com/mertcankose/Daily-Frontend",
+          githubLink: "https://github.com/mertcankose/React-Admin-Dashboard",
           technologies: ["JavaScript", "React"]
         },
         {
@@ -53,7 +53,7 @@ export const workMixin = {
           description:
             "A weather app that I developed with Node.js and Express.js. Also I used Open Weather Map Apı for weather datas.",
           githubLink: "https://github.com/mertcankose/Weather-App",
-          technologies: ["Express.js", "Open Weather Map API"]
+          technologies: ["Express.js", "Open Weather API"]
         },
         {
           siteLink: "https://github.com/mertcankose/Daily-Frontend",

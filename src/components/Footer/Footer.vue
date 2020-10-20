@@ -28,6 +28,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--f-color);
     @media (max-width: 649px) {
       flex-direction: column;
       justify-content: space-evenly;

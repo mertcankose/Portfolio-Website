@@ -27,7 +27,7 @@ export default {
   margin-bottom: 100px;
   @media (max-width: 900px) {
     flex-direction: column;
-    width: 95%;
+    width: 90%;
     height: auto;
   }
   @media (max-width: 649px) {
@@ -37,16 +37,16 @@ export default {
     @media (max-width: 900px) {
       margin-left: auto;
       margin-right: auto;
-      width: 86%;
+      width: 85%;
     }
   }
   .toolkit-box {
-    max-width: 60px;
+    max-width: 80px;
     @media (max-width: 900px) {
       min-width: 90%;
       margin-left: auto;
       margin-right: auto;
-      margin-top: 80px;
+      margin-top: 40px;
       margin-bottom: 10px;
       order: -1;
     }

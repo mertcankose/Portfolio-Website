@@ -16,7 +16,7 @@ export default {
   font-size: 34px;
   letter-spacing: 3px;
   @media (max-width: 720px) {
-    font-size: 26px;
+    font-size: 24px;
   }
 }
 </style>

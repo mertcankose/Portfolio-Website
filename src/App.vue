@@ -33,6 +33,11 @@ export default {
   },
   created() {
     AOS.init();
+
+    //theme
+    let onpageLoad = localStorage.getItem("theme") || "";
+    let element = document.getElementsByTagName("html")[0];
+    element.classList.add(onpageLoad);
   }
 };
 </script>

@@ -33,8 +33,8 @@ export default {
 .projects-out {
   h1 {
     text-align: center;
-    color: var(--g-heading);
-    margin-bottom: 40px;
+    color: var(--w-heading);
+    margin-bottom: 44px;
     margin-top: 40px;
   }
 }

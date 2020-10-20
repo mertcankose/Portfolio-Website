@@ -46,6 +46,7 @@ export default {
   h1 {
     font-size: 24px;
     letter-spacing: 10px;
+    color: var(--w-toolkit-heading);
     background-image: linear-gradient(
       0deg,
       var(--w-toolkit-background-gradient-1),
@@ -76,10 +77,11 @@ export default {
     &::after {
       content: "TOOLKIT";
       position: absolute;
-      right: -150px;
+      right: -130px;
       font-size: 24px;
       letter-spacing: 10px;
       transform: rotate(90deg);
+      color: var(--w-toolkit-after);
       //padding-left: 4px;
       //padding-right: 4px;
       background-image: linear-gradient(
@@ -90,17 +92,20 @@ export default {
       background-size: 10px 10px;
       background-repeat: repeat-x;
       background-position: bottom;
+      @media (max-width: 1200px) {
+        right: -110px;
+      }
       @media (max-width: 900px) {
         display: none;
       }
     }
     svg {
-      width: 56px;
-      height: 56px;
+      width: 54px;
+      height: 54px;
       @media (max-width: 1200px) {
         margin-bottom: 0;
-        width: 44px;
-        height: 44px;
+        width: 40px;
+        height: 40px;
       }
     }
     &-item {
@@ -114,9 +119,9 @@ export default {
       span {
         transform: translateY(100%);
         z-index: -10;
-        color: transparent;
         font-size: 15px;
         margin-top: 6px;
+        color: var(--w-toolkit-span-hidden);
         @media (max-width: 900px) {
           transform: translateY(0);
           color: var(--w-toolkit-span);
@@ -144,8 +149,13 @@ export default {
       color: var(--g-js);
     }
     .nodejs {
+      color: var(--w-toolkit-nodejs);
+    }
+    .express {
+      color: var(--w-toolkit-express);
     }
     .mongodb {
+      color: var(--w-toolkit-mongodb);
     }
     .vscode {
       color: var(--g-vscode);

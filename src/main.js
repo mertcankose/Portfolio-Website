@@ -9,6 +9,7 @@ import Vuelidate from "vuelidate"; //FOR FORMS VALIDATION
 //FOR SCROLL
 import AOS from "aos";
 import "aos/dist/aos.css";
+import axios from "axios";
 
 Vue.use(VueMq, {
   breakpoints: {
@@ -20,6 +21,7 @@ Vue.use(VueMq, {
 });
 
 Vue.use(Vuelidate);
+Vue.use(axios);
 
 Vue.use(AOS);
 AOS.init();
@@ -29,5 +31,6 @@ Vue.config.productionTip = false;
 new Vue({
   router,
   store,
+
   render: h => h(App)
 }).$mount("#app");
