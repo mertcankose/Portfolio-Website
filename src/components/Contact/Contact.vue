@@ -10,9 +10,10 @@
   >
     <h1>Contact</h1>
 
-    <form action="post" @submit="onSubmit">
+    <form action="https://formspree.io/f/meqpggww" method="post">
       <input
         type="text"
+        name="name"
         placeholder="Name"
         v-model="name"
         @blur="$v.name.$touch()"
@@ -24,6 +25,7 @@
 
       <input
         type="email"
+        name="email"
         placeholder="Email"
         v-model="email"
         @blur="$v.email.$touch()"
@@ -65,7 +67,7 @@ import {
   minLength,
   maxLength
 } from "vuelidate/lib/validators";
-import axios from "axios";
+//import axios from "axios";
 export default {
   name: "Contact",
   data() {
@@ -99,6 +101,8 @@ export default {
         message: this.message
       };
 
+      console.log(form);
+
       this.name = null;
       this.email = null;
       this.message = "";
@@ -115,7 +119,7 @@ export default {
           }
         ]
       };
-      */
+
       const id = process.env.MAILCHIMP_ID;
       //const jsonData = JSON.stringify(data);
       const listId = id;
@@ -124,25 +128,22 @@ export default {
       const password = process.env.MAILCHIMP_PASSWORD;
 
       const options = {
-        method: "POST",
-        auth: password
+        //method: "POST",
+        auth: password,
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*"
       };
 
       axios
-        .post(url, options)
+        .post(url, data, options)
         .then(response => {
-          console.log("post-response", response);
-          if (response.statusCode === 200) {
-            console.log("success");
-          } else {
-            console.log("fail");
-          }
+          console.log(response);
         })
-        .catch(e => {
-          console.log("hata", e);
+        .catch(error => {
+          console.log(error);
         });
-
-      console.log(form);
+*/
     }
   }
 };
