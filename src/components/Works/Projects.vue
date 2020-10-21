@@ -45,8 +45,8 @@ export default {
   gap: 50px;
 
   @media (max-width: 649px) {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 4px;
+    padding-right: 4px;
   }
   .project-box {
     width: 30%;

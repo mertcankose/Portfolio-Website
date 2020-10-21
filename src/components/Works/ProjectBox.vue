@@ -149,10 +149,10 @@ export default {
           font-size: 14px;
           color: var(--w-project-card-technologies);
           &:not(:nth-child(1)) {
-            margin-left: 12px;
+            margin-left: 10px;
           }
           @media (max-width: 900px) {
-            font-size: 11px;
+            font-size: 10px;
           }
         }
       }
@@ -181,8 +181,8 @@ export default {
           color: var(--w-project-box-svg-hover);
         }
         @media (max-width: 649px) {
-          width: 18px;
-          height: 18px;
+          width: 16px;
+          height: 16px;
         }
       }
     }

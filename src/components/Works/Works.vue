@@ -31,13 +31,14 @@ export default {
     height: auto;
   }
   @media (max-width: 649px) {
+    width: 100%;
   }
   .projects-box {
     max-width: 90%;
     @media (max-width: 900px) {
       margin-left: auto;
       margin-right: auto;
-      width: 85%;
+      //width: 85%;
     }
   }
   .toolkit-box {
