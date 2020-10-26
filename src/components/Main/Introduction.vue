@@ -3,7 +3,7 @@
     <p class="hiMessage">Hi, my name is</p>
     <h1>MERTCAN KOSE.</h1>
     <p class="presentation">
-      I'm a computer science student and a front-end software engineer in
+      I'm a computer science student and a front-end software engineer candidate in
       Turkey.
     </p>
   </div>
