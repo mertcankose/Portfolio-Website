@@ -3,7 +3,7 @@ export const workMixin = {
     return {
       works: [
         {
-          siteLink: "https://vue-admin-dashboard.mertcankose.vercel.app/",
+          siteLink: "https://e-course-dashboard.vercel.app/signup",
           photo: "e-course-dashboard",
           heading: "E-Course Dashboard",
           description:
