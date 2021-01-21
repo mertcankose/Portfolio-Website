@@ -3,15 +3,14 @@
     <p class="hiMessage">Hi, my name is</p>
     <h1>MERTCAN KOSE.</h1>
     <p class="presentation">
-      I'm a computer science student and a front-end software engineer candidate in
-      Turkey.
+      I'm a computer engineering student and a software engineer candidate in Turkey.
     </p>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Introduction"
+  name: "Introduction",
 };
 </script>
 
