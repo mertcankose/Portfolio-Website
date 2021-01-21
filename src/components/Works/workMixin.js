@@ -7,9 +7,9 @@ export const workMixin = {
           photo: "e-course-dashboard",
           heading: "E-Course Dashboard",
           description:
-            "An e-course dashboard that I developed with vue, you can sign up and then sign in the system. I also used Tailwind Css in the project.",
+            "An e-course dashboard that I developed with vue, you can register and login the system. I also used Tailwind Css in the project.",
           githubLink: "https://github.com/mertcankose/E-Course-Dashboard",
-          technologies: ["JavaScript", "Vue", "Firebase", "Tailwind Css"],
+          technologies: ["Vue", "Firebase", "Tailwind Css"],
         },
         {
           siteLink: "https://vue-admin-dashboard.mertcankose.vercel.app/",
